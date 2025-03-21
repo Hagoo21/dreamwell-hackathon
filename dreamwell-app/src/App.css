@@ -1,0 +1,311 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Common screen styles */
+.screen {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #e0e0e0;
+}
+
+.header {
+  background-color: #555;
+  color: white;
+  padding: 20px;
+  text-align: left;
+}
+
+.navigation-dots {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  gap: 10px;
+}
+
+.nav-dot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-dot.active {
+  background-color: #555;
+}
+
+/* Screen 1: Search Screen */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  flex: 1;
+  gap: 20px;
+}
+
+.search-input {
+  width: 80%;
+  max-width: 800px;
+  height: 200px;
+  padding: 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  resize: none;
+}
+
+.search-button {
+  background-color: #555;
+  color: white;
+  padding: 15px 20px;
+  width: 80%;
+  max-width: 800px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Screen 2: Results Screen */
+.results-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  flex: 1;
+  margin-top: 0;
+  position: relative;
+}
+
+.metrics-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 480px;
+  padding: 100px 0 30px 0;
+  margin-left: 30px;
+  width: 120px;
+  z-index: 2;
+}
+
+.metric-row {
+  margin-bottom: 0;
+  height: 24px;
+}
+
+.metric-label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.influencer-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex: 1;
+  margin-top: -60px;
+}
+
+.influencer-card {
+  width: 160px;
+  height: 480px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  margin-bottom: 40px;
+}
+
+.influencer-metrics {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 76px;
+  padding: 0 20px;
+}
+
+.metric-value {
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-button-container {
+  display: flex;
+  align-items: center;
+  height: 480px;
+  padding: 100px 0 30px 0;
+  z-index: 2;
+}
+
+.review-button {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+  width: 110px;
+  height: 100px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+/* Screen 3: Video Screen */
+.video-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.video-title {
+  margin-bottom: 20px;
+}
+
+.video-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.video-player {
+  width: 500px;
+  height: 280px;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.prev-video-button, .next-video-button {
+  width: 100px;
+  height: 220px;
+  background-color: #333; 
+  position: relative;
+  cursor: pointer;
+  z-index: 0;
+}
+
+.prev-video-button {
+  left: 20px;
+}
+
+.next-video-button {
+  right: 20px;
+}
+
+.play-button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.play-icon {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-left: 30px solid white;
+  border-bottom: 20px solid transparent;
+  margin-left: 10px;
+}
+
+.video-details {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.comments-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.user-icons {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 40px;
+}
+
+.user-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.comment-box {
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.comment-input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+}
+
+.send-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+  border: none;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.send-icon {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 15px solid #555;
+  border-bottom: 10px solid transparent;
+}
